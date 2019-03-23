@@ -231,7 +231,7 @@ namespace benchmarks
                 case SyntaxKind.RemoveAccessorDeclaration:
                 case SyntaxKind.UnknownAccessorDeclaration:
                 case SyntaxKind.ParameterList:
-                    return null;
+                    return ((ParameterListSyntax)node).Parameters;
                 case SyntaxKind.BracketedParameterList:
                 case SyntaxKind.Parameter:
                 case SyntaxKind.TypeParameterList:
@@ -298,7 +298,7 @@ namespace benchmarks
                 case GenericNameSyntax nodeSyntax:
                     return nodeSyntax.SyntaxTree;
                 case ParameterListSyntax parameterListSyntax:
-                    return null;
+                    return parameterListSyntax.Parameters;
 
                 default:
                     return null;
