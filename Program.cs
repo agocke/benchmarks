@@ -7,7 +7,7 @@ namespace benchmarks
     {
         static void Main(string[] args)
         {
-            _ = BenchmarkRunner.Run<KindCheck>();
+            var summary = BenchmarkRunner.Run<DynamicDispatch>();
         }
     }
 }
